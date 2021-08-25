@@ -1,5 +1,5 @@
-Reading a JSON file in C# using Json2CSharp to generate classes
----------------------------------------------------------------
+Reading a JSON file in C# using Json2CSharp to generate data classes
+--------------------------------------------------------------------
 
 1. Create a new .NET console project in Visual Studio or Rider, or at the command prompt
    ```
@@ -69,7 +69,7 @@ Reading a JSON file in C# using Json2CSharp to generate classes
           public List<Menu> Menu { get; set; }
       }
       ```
-   4. and let's add code to read in the JSON file and deserialize it into our structure in the Main() method:
+   4. and let's add code to read in the JSON file and deserialize it into our structure in the Main() method, using the example it gave us plus `File.ReadAllText()` to read the whole file into a string:
       ```c#
       var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(
           File.ReadAllText("genericSample.json"));
