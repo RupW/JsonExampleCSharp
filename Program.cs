@@ -20,19 +20,19 @@ namespace JsonExample2
         }
     }
 
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    // MenuRoot myDeserializedClass = JsonConvert.DeserializeObject<MenuRoot>(myJsonResponse);
     public class Menu
     {
-        [JsonProperty("DishName")]
+        [JsonProperty("dishName")]
         public string DishName { get; set; }
 
-        [JsonProperty("Cost")]
-        public string Cost { get; set; }
+        [JsonProperty("cost")]
+        public int Cost { get; set; }
     }
 
     public class MenuRoot
     {
-        [JsonProperty("Menu")]
+        [JsonProperty("menu")]
         public List<Menu> Menu { get; set; }
     }
 }

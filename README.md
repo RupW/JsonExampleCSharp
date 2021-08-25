@@ -25,23 +25,23 @@ Reading a JSON file in C# using Json2CSharp to generate data classes
       ```
 
 4. Generate typed classes for our example JSON file
-   1. Use either the online tool at [https://json2csharp.com](https://json2csharp.com/) or the offline version [from GitHub](https://github.com/Json2CSharp/Json2CSharpCodeGenerator). You shouldn't need to change any of the options.
+   1. Use either the online tool at [https://json2csharp.com](https://json2csharp.com/) or the offline version [from GitHub](https://github.com/Json2CSharp/Json2CSharpCodeGenerator). You might want to tick "Add JsonProperty Attributes" if you're using the website to get Pascal-Case C# property names.
       (They're equivalent: they use the same code generation engine. For this data it's OK to use the website but for real work we should avoid posting real project data to strange websites!)
    2. For now let's just put the code it generated into Program.cs, in the namespace but below the Program class:
       ```c#
       // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
       public class Menu
       {
-          [JsonProperty("DishName")]
+          [JsonProperty("dishName")]
           public string DishName { get; set; }
 
-          [JsonProperty("Cost")]
+          [JsonProperty("cost")]
           public string Cost { get; set; }
       }
 
       public class Root
       {
-          [JsonProperty("Menu")]
+          [JsonProperty("menu")]
           public List<Menu> Menu { get; set; }
       }
       ```
@@ -56,16 +56,16 @@ Reading a JSON file in C# using Json2CSharp to generate data classes
       // MenuRoot myDeserializedClass = JsonConvert.DeserializeObject<MenuRoot>(myJsonResponse); 
       public class Menu
       {
-          [JsonProperty("DishName")]
+          [JsonProperty("dishName")]
           public string DishName { get; set; }
 
-          [JsonProperty("Cost")]
+          [JsonProperty("cost")]
           public string Cost { get; set; }
       }
 
       public class MenuRoot
       {
-          [JsonProperty("Menu")]
+          [JsonProperty("menu")]
           public List<Menu> Menu { get; set; }
       }
       ```

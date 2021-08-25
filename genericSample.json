@@ -1,16 +1,16 @@
 {
-	"Menu": [
+	"menu": [
         {
-            "DishName": "Kentish Fried Chicken",
-            "Cost": "6"
+            "dishName": "Kentish Fried Chicken",
+            "cost": 6
         },
         {
-            "DishName": "Pasta Olio y Aglio",
-            "Cost": "1"
+            "dishName": "Pasta Olio y Aglio",
+            "cost": 1
         },
         {
-            "DishName": "Creamy Pork Stew",
-            "Cost": "3"
+            "dishName": "Creamy Pork Stew",
+            "cost": 3
         }
     ]
 }
