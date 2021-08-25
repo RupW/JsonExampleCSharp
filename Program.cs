@@ -9,7 +9,8 @@ namespace JsonExample2
     {
         static void Main(string[] args)
         {
-            var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(File.ReadAllText("genericSample.json"));
+            var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(File.ReadAllText(
+                @"C:\Work\Projects\JsonExample2\genericSample.json"));
 
             Console.WriteLine("Today's menu");
             Console.WriteLine("------------");

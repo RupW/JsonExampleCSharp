@@ -27,8 +27,8 @@ Reading a JSON file in C# using Json2CSharp to generate data classes
 
 4. Generate typed classes for our example JSON file
    1. Use either the online tool at [https://json2csharp.com](https://json2csharp.com/) or the offline version [from GitHub](https://github.com/Json2CSharp/Json2CSharpCodeGenerator).
-      * The two are equivalent: they use the same code generation engine. For this data it's OK to use the website but for real work we should avoid posting real project data to strange websites!)
-      * You might want to tick "Add JsonProperty Attributes" if you're using the website to get PascalCase C# property names. This is on by default in the offline version.
+      * The two are equivalent: they use the same code generation engine. For this data it's OK to use the website but for real work we should avoid posting real project data to strange websites!
+      * You might want to tick "Add JsonProperty Attributes" if you're using the website to get normal PascalCase C# property names. This is on by default in the offline version.
    2. For now let's just put the code it generated into Program.cs, in the namespace but below the Program class:
       ```c#
       // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
