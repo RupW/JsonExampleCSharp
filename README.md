@@ -10,6 +10,7 @@ Reading a JSON file in C# using Json2CSharp to generate data classes
 2. (Optional but a good habit!) Make a git repository
    ```
    dotnet new gitignore
+   git init
    git add .
    git commit -a -m "Initial commit"
    ```
