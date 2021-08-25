@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace JsonExample2
 {
@@ -8,7 +9,14 @@ namespace JsonExample2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var root = JsonConvert.DeserializeObject<Root>(File.ReadAllText("genericSample.json"));
+
+            Console.WriteLine("Today's menu");
+            Console.WriteLine("------------");
+            foreach (var menu in root.Menu)
+            {
+                Console.WriteLine($"    {menu.DishName,-30} £{menu.Cost}");
+            }
         }
     }
 
