@@ -1,5 +1,5 @@
-Reading a JSON file in C# using Json2CSharp
--------------------------------------------
+Reading a JSON file in C# using Json2CSharp to generate classes
+---------------------------------------------------------------
 
 1. Create a new .NET console project in Visual Studio or Rider, or at the command prompt
    ```
@@ -13,6 +13,7 @@ Reading a JSON file in C# using Json2CSharp
    git add .
    git commit -a -m "Initial commit"
    ```
+
 3. Add Newtonsoft.Json, the de-facto .NET JSON library.
    1. In Visual Studio
       1. right-click the project name and "Manage NuGet packages"   
@@ -22,8 +23,9 @@ Reading a JSON file in C# using Json2CSharp
       ```
       dotnet add package Newtonsoft.Json 
       ```
+
 4. Generate typed classes for our example JSON file
-   1. Use either the online tool at [https://json2csharp.com](https://json2csharp.com/) or the offline version [from GitHub](https://github.com/Json2CSharp/Json2CSharpCodeGenerator).
+   1. Use either the online tool at [https://json2csharp.com](https://json2csharp.com/) or the offline version [from GitHub](https://github.com/Json2CSharp/Json2CSharpCodeGenerator). You shouldn't need to change any of the options.
       (They're equivalent: they use the same code generation engine. For this data it's OK to use the website but for real work we should avoid posting real project data to strange websites!)
    2. For now let's just put the code it generated into Program.cs, in the namespace but below the Program class:
       ```c#
@@ -76,8 +78,8 @@ Reading a JSON file in C# using Json2CSharp
       ```c#
       using System.IO;
       ```
-      **Note**: if you're using Visual Studio or Rider then it will default to starting the program in the directory it has compiled it in to, which will be two or three directories below your project directory.
-      There are many ways of solving this but for now it's probably simplest to give the full path to the file here, e.g.
+      **Note**: if you're using Visual Studio or Rider then it will default to starting the program in the directory it has compiled it into, which will be two or three directories below your project directory.
+      There are several ways of solving this but for now it's probably simplest to give the full path to the file here, e.g.
       ```c#
       var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(
           File.ReadAllText(@"c:\work\speedcoding2021\jsonexample\genericSample.json"));
