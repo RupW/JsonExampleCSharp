@@ -92,9 +92,9 @@ Reading a JSON file in C# using Json2CSharp to generate data classes
    ```c#
    Console.WriteLine("Today's menu");
    Console.WriteLine("------------");
-   foreach (var menu in menuRoot.Menu)
+   foreach (var item in menuRoot.Menu)
    {
-       Console.WriteLine($"    {menu.DishName,-30} £{menu.Cost}");
+       Console.WriteLine($"    {item.DishName,-30} £ {item.Cost}");
    }
    ```
    and run the project from the IDE, or `dotnet run` from the console.

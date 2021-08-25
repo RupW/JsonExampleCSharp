@@ -9,14 +9,14 @@ namespace JsonExample2
     {
         static void Main(string[] args)
         {
-            var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(File.ReadAllText(
-                @"C:\Work\Projects\JsonExample2\genericSample.json"));
+            var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(
+                File.ReadAllText("genericSample.json"));
 
             Console.WriteLine("Today's menu");
             Console.WriteLine("------------");
-            foreach (var menu in menuRoot.Menu)
+            foreach (var item in menuRoot.Menu)
             {
-                Console.WriteLine($"    {menu.DishName,-30} £{menu.Cost}");
+                Console.WriteLine($"    {item.DishName,-30} £{item.Cost}");
             }
         }
     }
