@@ -1,0 +1,16 @@
+{
+	"Menu": [
+        {
+            "DishName": "Kentish Fried Chicken",
+            "Cost": "6"
+        },
+        {
+            "DishName": "Pasta Olio y Aglio",
+            "Cost": "1"
+        },
+        {
+            "DishName": "Creamy Pork Stew",
+            "Cost": "3"
+        }
+    ]
+}
