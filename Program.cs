@@ -9,11 +9,11 @@ namespace JsonExample2
     {
         static void Main(string[] args)
         {
-            var root = JsonConvert.DeserializeObject<Root>(File.ReadAllText("genericSample.json"));
+            var menuRoot = JsonConvert.DeserializeObject<MenuRoot>(File.ReadAllText("genericSample.json"));
 
             Console.WriteLine("Today's menu");
             Console.WriteLine("------------");
-            foreach (var menu in root.Menu)
+            foreach (var menu in menuRoot.Menu)
             {
                 Console.WriteLine($"    {menu.DishName,-30} £{menu.Cost}");
             }
@@ -30,7 +30,7 @@ namespace JsonExample2
         public string Cost { get; set; }
     }
 
-    public class Root
+    public class MenuRoot
     {
         [JsonProperty("Menu")]
         public List<Menu> Menu { get; set; }
